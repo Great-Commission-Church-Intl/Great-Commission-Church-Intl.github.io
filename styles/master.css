@@ -21,9 +21,17 @@ div.container {
 h1.title {
   font-family: inherit;
   font-weight: bold;
+  font-size: 48px;
+  color: #000;
+  margin: 0 auto 5px auto;
+}
+
+h1.subtitle {
+  font-family: inherit;
+  font-weight: bold;
   font-size: 24px;
   color: #000;
-  margin: auto auto 20px auto;
+  margin: 0 auto 25px auto;
 }
 
 h2.subtitle {
@@ -38,7 +46,8 @@ button.nav-main {
   font-family: inherit;
   font-weight: 400;
   font-size: 16px;
-  color: transparent;
+  color: #000;
+  background-color: transparent;
   border: 1px solid #000;
   border-radius: 5px;
   width: 250px;
