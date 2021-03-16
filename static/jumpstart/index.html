@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+    <title>GCCI EM Jumpstart</title>
+    <link rel="shortcut icon" href="/src/logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="jumpstart.css">
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+    <script type="text/javascript" src="firebase.js"></script>
+    <script type="text/javascript" src="jumpstart.js"></script>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+
+    <script>
+      $('html, body').css({ 'overflow': 'hidden', 'height': '100%' })
+    </script>
+
+    <div class="background-container">
+      <div class="img-src" style="background-image:url('/src/jumpstart/bkg1clear.png')"></div>
+      <div class="img-src blurred-img" id="blurred-background" style="background-image:url('/src/jumpstart/bkg1gaussian.png')"></div>
+      <div class="img-src blurred-img" id="darken-background" style="background-color:#000;z-index:-1"></div>
+    </div>
+
+    <div class="wrapper" id="wrapper">
+
+      <div id="logo-wrapper" class="logo-wrapper">
+        <img id="logo" class="logo" src="/src/logo.png" alt="GCCI EM Logo">
+      </div>
+      <div id="logo-title" class="logo-title" class="logo-title">
+        <h1 class="logo-title">Jumpstart!<h1>
+      </div>
+
+      <div class="countdown-header" id="countdown-header">
+        <p class="countdown-header-time" id="cdh-days"></p>
+        <div style="width: 5px;"></div>
+        <p class="countdown-header-label">days</p>
+        <div style="width: 40px;"></div>
+        <p class="countdown-header-time" id="cdh-hours"></p>
+        <div style="width: 5px;"></div>
+        <p class="countdown-header-label">hours</p>
+        <div style="width: 40px;"></div>
+        <p class="countdown-header-time" id="cdh-minutes"></p>
+        <div style="width: 5px;"></div>
+        <p class="countdown-header-label">minutes</p>
+        <div style="width: 40px;"></div>
+        <p class="countdown-header-time" id="cdh-seconds"></p>
+        <div style="width: 5px;"></div>
+        <p class="countdown-header-label">seconds</p>
+      </div>
+
+      <button id="master-button" type="button" class="return-to-em-site" onclick="location.href='https://gcciec.com';">Return to EM Site</button>
+
+      <!-- HEADING -->
+      <div class="subtitle-wrapper">
+        <h1 class="subtitle">GCCI EM PRESENTS</h1>
+      </div>
+      <div class="title-wrapper">
+        <h1 class="title">JUMPSTART!</h1>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="content-wrapper">
+        <h2 class="title-main">What is Jumpstart?</h2>
+        <p class="desc">
+          Jumpstart is designed to enable our next generation of young men and women to defend their faith by answering
+          questions that they might have themselves. Together, Pastors <b>Daniel Elliott</b> and <b>York Liu</b> have answered many of
+          the challenging questions that our youth have brought to the table. If you have a question you'd like answered,
+          feel free to submit it below!
+        </p>
+        <input type="text" value="" class="question-input" placeholder="Ask a question..." id="question">
+        <div class="submit-wrapper">
+          <button type="button" class="question" id="submit-question">Submit</button>
+          <div class="submit-indicator hidden" id="submit-indicator"></div>
+          <p class="submit-text hidden" id="submit-text">Your question has been successfully submitted!</p>
+        </div>
+        <h2 class="title" id="countdown-label-main">Join our next Jumpstart event!</h2>
+        <div class="countdown-wrapper" id="countdown-wrapper">
+          <div class="countdown-element">
+            <p class="countdown-time" id="cde-days"></p>
+            <p class="countdown-label">Days</p>
+          </div>
+          <div class="countdown-element">
+            <p class="countdown-time" id="cde-hours"></p>
+            <p class="countdown-label">Hours</p>
+          </div>
+          <div class="countdown-element">
+            <p class="countdown-time" id="cde-minutes"></p>
+            <p class="countdown-label">Minutes</p>
+          </div>
+          <div class="countdown-element">
+            <p class="countdown-time" id="cde-seconds"></p>
+            <p class="countdown-label">Seconds</p>
+          </div>
+        </div>
+
+        <div class="video-wrapper">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/GiPo3KBzccE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <p class="video-subtitle">Check out our last Jumpstart event to see what everyone thought about it!</h1>
+
+      </div>
+    </div>
+
+    <div class="footer">
+      <p class="footer">Copyright © 2020-2021 GCCI English Ministry. All Rights Reserved</p>
+    </div>
+
+    <script>
+      $('html, body').removeAttr('style')
+    </script>
+
+  </body>
+
+</html>
