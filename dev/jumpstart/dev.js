@@ -25,6 +25,29 @@ function fetchQuestions() {
   let questionCount = 1;
 
   db.collection('jumpstartQuestions').get().then(querySnapshot => {
+
+    if (querySnapshot.empty) {
+
+      let errorWrapper = document.createElement('div');
+      errorWrapper.style.width = '100%';
+      errorWrapper.style.height = '50vh';
+      errorWrapper.style.display = 'flex';
+      errorWrapper.style.justifyContent = 'center';
+      errorWrapper.style.alignItems = 'center';
+      let errorMessage = document.createElement('p');
+      errorMessage.style.color = '#C00000';
+      errorMessage.style.fontWeight = 'bold';
+      errorMessage.style.fontFamily = 'inherit';
+      errorMessage.style.fontSize = '16px';
+      errorMessage.style.textAlign = 'center';
+      let errorText = document.createTextNode("No questions have been submitted yet!");
+      errorMessage.appendChild(errorText);
+      errorWrapper.appendChild(errorMessage);
+      container.appendChild(errorWrapper);
+      return;
+
+    }
+
     querySnapshot.forEach(doc => {
 
       let question = doc.get('q');
