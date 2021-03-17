@@ -91,7 +91,7 @@ window.onload = (event) => {
 
         //BACKGROUND BLUR
         document.getElementById('blurred-background').style.opacity = scrollPercentage + 0.2;
-        document.getElementById('darken-background').style.opacity = scrollPercentage * 0.4;
+        document.getElementById('darken-background').style.opacity = scrollPercentage * 0.4 > 0.4 ? 0.4 : scrollPercentage * 0.4;
 
         //LOGO SHRINK
         var wrapADJ = scrollPercentage * 60 > 60 ? 60 : scrollPercentage * 60;

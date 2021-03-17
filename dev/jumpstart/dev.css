@@ -1,0 +1,70 @@
+html {
+  background-color: #F1EAFF;
+}
+
+div.content-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+div.content-header {
+  width: 100%;
+  height: 17%;
+  min-height: 17%;
+  background-color: #36393F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+h1.title {
+  color: #FFF;
+  font-family: inherit;
+  font-size: 44px;
+}
+
+div.countdown-header {
+  width: 50vw;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+p.countdown-header-time {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  text-align: center;
+  margin: 0;
+}
+
+p.countdown-header-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFF;
+  text-align: center;
+  margin: 0;
+}
+
+div.questions {
+  margin: 0;
+  padding: 50px 30%;
+  width: 40%;
+  overflow-y: scroll;
+}
+
+p.question {
+  font-size: 16px;
+  margin: 25px 0 25px 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

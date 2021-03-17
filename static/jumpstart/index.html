@@ -21,10 +21,6 @@
 
   <body>
 
-    <script>
-      $('html, body').css({ 'overflow': 'hidden', 'height': '100%' })
-    </script>
-
     <div class="background-container">
       <div class="img-src" style="background-image:url('/src/jumpstart/bkg1clear.png')"></div>
       <div class="img-src blurred-img" id="blurred-background" style="background-image:url('/src/jumpstart/bkg1gaussian.png')"></div>
@@ -83,7 +79,9 @@
           <div class="submit-indicator hidden" id="submit-indicator"></div>
           <p class="submit-text hidden" id="submit-text">Your question has been successfully submitted!</p>
         </div>
-        <h2 class="title" id="countdown-label-main">Join our next Jumpstart event!</h2>
+        <h2 class="title-sub" id="countdown-label-main">Join our next Jumpstart event!</h2>
+        <h1 class="event-date">Sunday, April 4, 2021 @ 11AM</h1>
+        <button type="button" class="youtube-button" onclick="location.href='https://youtube.gcciec.com'">Live on our YouTube Channel</button>
         <div class="countdown-wrapper" id="countdown-wrapper">
           <div class="countdown-element">
             <p class="countdown-time" id="cde-days"></p>
@@ -115,10 +113,6 @@
     <div class="footer">
       <p class="footer">Copyright © 2020-2021 GCCI English Ministry. All Rights Reserved</p>
     </div>
-
-    <script>
-      $('html, body').removeAttr('style')
-    </script>
 
   </body>
 
