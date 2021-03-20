@@ -47,6 +47,50 @@ div.wrapper {
   flex-direction: column;
 }
 
+div.mobile-alert {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFDDEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  pointer-events: all;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+div.mobile-alert-hidden {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+p.mobile-alert {
+  color: #FF6464;
+  text-align: center;
+  font-size: 16px;
+  font-family: inherit;
+  margin: 0 10%;
+}
+
+button.mobile-alert {
+  border: 2px solid #FF6464;
+  color: #FF6464;
+  border-radius: 5px;
+  background-color: transparent;
+  height: 50px;
+  width: 200px;
+  font-family: inherit;
+  font-size: 13px;
+  margin: 10% 10% 0 10%;
+}
+
 div.logo-wrapper {
   position: fixed;
   top: 25px;
