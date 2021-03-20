@@ -61,7 +61,7 @@ div.mobile-alert {
   align-items: center;
   z-index: 100;
   pointer-events: all;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.5s;
 }
 
