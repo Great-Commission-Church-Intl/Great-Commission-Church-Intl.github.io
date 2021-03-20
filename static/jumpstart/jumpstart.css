@@ -53,8 +53,6 @@ div.mobile-alert {
   bottom: 0;
   right: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
   background-color: #FFDDEE;
   display: flex;
   justify-content: center;

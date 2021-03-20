@@ -26,11 +26,12 @@
         This website is not optimized for your device! Some or all features may be unavailable. It is advised to view this site on
         a desktop computer or laptop for browsing. If you understand the implications, you can still continue to view this site on your device.
       </p>
-      <button type="button" class="mobile-alert">Continue to Site</button>
+      <button id="cts" type="button" class="mobile-alert">Continue to Site</button>
     </div>
 
     <script type="text/javascript">
-      if (window.mobileCheck()) { document.getElementById('mobile-alert').classList.remove('mobile-alert-hidden'); }
+      document.getElementById('cts').addEventListener('click', function() { continueToSite(); });
+      if (!window.mobileCheck()) { document.getElementById('mobile-alert').classList.remove('mobile-alert-hidden'); }
     </script>
 
     <div class="background-container">
