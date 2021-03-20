@@ -75,10 +75,11 @@ p.mobile-alert {
   font-size: 16px;
   font-family: inherit;
   margin: 30% 20% 0 20%;
+  font-weight: bold;
 }
 
 button.mobile-alert {
-  border: 2px solid #FF6464;
+  border: 5px solid #FF6464;
   color: #FF6464;
   border-radius: 5px;
   background-color: transparent;
@@ -87,6 +88,7 @@ button.mobile-alert {
   font-family: inherit;
   font-size: 13px;
   margin: 20% 20% 0 20%;
+  font-weight: bold;
 }
 
 div.logo-wrapper {
