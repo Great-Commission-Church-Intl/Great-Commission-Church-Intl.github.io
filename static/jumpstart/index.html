@@ -21,6 +21,18 @@
 
   <body>
 
+    <div class="mobile-alert mobile-alert-hidden" id="mobile-alert">
+      <p class="mobile-alert">
+        This website is not optimized for your device! Some or all features may be unavailable. It is advised to view this site on
+        a desktop computer or laptop for browsing. If you understand the implications, you can still continue to view this site on your device.
+      </p>
+      <button type="button" class="mobile-alert">Continue to Site</button>
+    </div>
+
+    <script type="text/javascript">
+      if (window.mobileCheck()) { document.getElementById('mobile-alert').classList.remove('mobile-alert-hidden'); }
+    </script>
+
     <div class="background-container">
       <div class="img-src" style="background-image:url('/src/jumpstart/bkg1clear.png')"></div>
       <div class="img-src blurred-img" id="blurred-background" style="background-image:url('/src/jumpstart/bkg1gaussian.png')"></div>
@@ -28,14 +40,6 @@
     </div>
 
     <div class="wrapper" id="wrapper">
-
-      <div class="mobile-alert mobile-alert-hidden" id="mobile-alert">
-        <p class="mobile-alert">
-          This website is not optimized for your device! Some or all features may be unavailable. It is advised to view this site on
-          a desktop computer or laptop for browsing. If you understand the implications, you can still continue to view this site on your device.
-        </p>
-        <button type="button" class="mobile-alert">Continue to Site</button>
-      </div>
 
       <div id="logo-wrapper" class="logo-wrapper">
         <img id="logo" class="logo" src="/src/logo.png" alt="GCCI EM Logo">

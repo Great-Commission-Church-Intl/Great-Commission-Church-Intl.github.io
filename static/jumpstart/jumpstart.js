@@ -90,9 +90,6 @@ function continueToSite() {
 window.onload = (event) => {
 
   //MOBILE CHECK
-  if (window.mobileCheck) {
-    document.getElementById('mobile-alert').classList.remove('mobile-alert-hidden');
-  }
 
   //Scroll Effects
   document.getElementById('wrapper').addEventListener('scroll', e => {
