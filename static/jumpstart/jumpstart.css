@@ -55,11 +55,9 @@ div.mobile-alert {
   left: 0;
   background-color: #FFDDEE;
   display: flex;
-  justify-content: center;
   align-items: center;
   z-index: 100;
   pointer-events: all;
-  flex-direction: column;
   opacity: 1;
   transition: opacity 0.5s;
 }
@@ -75,7 +73,7 @@ p.mobile-alert {
   text-align: center;
   font-size: 16px;
   font-family: inherit;
-  margin: 0 20%;
+  margin: 30% 20% 0 20%;
 }
 
 button.mobile-alert {
