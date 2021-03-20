@@ -21,7 +21,7 @@ button.return-to-em-site {
   background: url('/src/exit-icon-white.png') 135px no-repeat;
   padding: 0 35px 0 0;
   background-size: 30px;
-  z-index: 100;
+  z-index: 99;
 }
 
 div.img-src {
@@ -61,6 +61,7 @@ div.mobile-alert {
   align-items: center;
   z-index: 100;
   pointer-events: all;
+  flex-direction: column;
   opacity: 1;
   transition: opacity 0.5s;
 }
