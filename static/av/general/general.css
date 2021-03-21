@@ -1,0 +1,77 @@
+body {
+  overflow-y: scroll;
+  width: 60vw;
+  margin: 0 20vw 0 20vw;
+}
+
+div.container {
+  justify-content: flex-start;
+}
+
+h1.title {
+  margin-top: 50px;
+  font-size: 32px;
+}
+
+p.info {
+  font-family: inherit;
+  font-size: 16px;
+}
+
+div.general-information-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 50px 0 0 0;
+  position: relative;
+}
+
+div.general-information-header {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin: 0 0 50px 0;
+  height: 50px;
+}
+
+div.general-information-header-underline {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 33%;
+  height: 0px;
+  border: 1px solid #000;
+  border-radius: 1px;
+  transition: left 0.2s;
+}
+
+button.gi-header {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  color: #000;
+  border: 0px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+button.gi-header:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.highlight, .highlight:hover, .highlight:active, .highlight:focus {
+  font-weight: bold;
+}
+
+div.gi-content {
+  opacity: 1;
+  transition: opacity 0.2s;
+  position: absolute;
+  left: 0;
+  top: 100px;
+}
+
+div.gi-content-hidden {
+  opacity: 0;
+  transition: opacity 0.2s;
+}

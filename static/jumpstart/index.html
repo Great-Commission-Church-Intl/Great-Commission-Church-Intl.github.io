@@ -21,6 +21,19 @@
 
   <body>
 
+    <div class="mobile-alert mobile-alert-hidden" id="mobile-alert">
+      <p class="mobile-alert">
+        This website is not optimized for your device! Some or all features may be unavailable. It is advised to view this site on
+        a desktop computer or laptop for browsing. If you understand the implications, you can still continue to view this site on your device.
+      </p>
+      <button id="cts" type="button" class="mobile-alert">Continue to Site</button>
+    </div>
+
+    <script type="text/javascript">
+      document.getElementById('cts').addEventListener('click', function() { continueToSite(); });
+      if (window.mobileCheck()) { document.getElementById('mobile-alert').classList.remove('mobile-alert-hidden'); }
+    </script>
+
     <div class="background-container">
       <div class="img-src" style="background-image:url('/src/jumpstart/bkg1clear.png')"></div>
       <div class="img-src blurred-img" id="blurred-background" style="background-image:url('/src/jumpstart/bkg1gaussian.png')"></div>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+    <title>GCCI EM Video & Broadcast System</title>
+    <link rel="shortcut icon" href="/src/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/master.css">
+    <link rel="stylesheet" type="text/css" href="video.css">
+    <script type="text/javascript" src="video.js"></script>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+
+    <button type="button" class="home" onclick="window.location.href='/'">Home</button>
+
+    <div class="container">
+
+      <h1 class="title"> GCCI EM Video & Broadcast System User Manual</h1>
+      <p class="info" style="margin: 50px 0 0 0;">
+        The English Sanctuary's video and broadcast system consists of 8 major components that work together to combine 3
+        inputs from two PCs and a camcorder and broadcasts those inputs to 2 projectors, the 3 TVs in the second floor hallway,
+        and YouTube or Zoom as well. The system is able to produce an output with a resolution up to 1080p @ 30fps or 60fps.
+        <br><br>You can mouse over each component below to see how they are connected, or you can click on a component and see details
+        about the component as well as where it is located in the sound booth.
+      </p>
+
+      <div class="system-component-layout">
+        <div class="component-list">
+          <button type="button" id="videoPPTComputer" class="video-component">PPT Computer</button>
+          <button type="button" id="videoBroadcastComputer" class="video-component">Broadcast Computer</button>
+          <button type="button" id="videoHDMISplitter" class="video-component">HDMI Splitter</button>
+          <button type="button" id="videoHDMISwitcher" class="video-component">HDMI Switcher</button>
+          <button type="button" id="videoCamcorder" class="video-component">Camcorder</button>
+          <button type="button" id="videoATEMSwitcher" class="video-component">ATEM Switcher</button>
+          <button type="button" id="videoFrontProjector" class="video-component">Front Projector</button>
+          <button type="button" id="videoBackProjector" class="video-component" style="margin-bottom:15px;">Back Projector</button>
+        </div>
+        <div class="component-detail">
+          <div class="image-container">
+            <img src="/src/video/videoAll.png" class="video-component" id="imageAll">
+            <img src="/src/video/videoPPTComputer.png" class="video-component video-component-hidden" id="imagePPTComputer">
+            <img src="/src/video/videoBroadcastComputer.png" class="video-component video-component-hidden" id="imageBroadcastComputer">
+            <img src="/src/video/videoHDMISplitter.png" class="video-component video-component-hidden" id="imageHDMISplitter">
+            <img src="/src/video/videoHDMISwitcher.png" class="video-component video-component-hidden" id="imageHDMISwitcher">
+            <img src="/src/video/videoCamcorder.png" class="video-component video-component-hidden" id="imageCamcorder">
+            <img src="/src/video/videoATEMSwitcher.png" class="video-component video-component-hidden" id="imageATEMSwitcher">
+            <img src="/src/video/videoFrontProjector.png" class="video-component video-component-hidden" id="imageFrontProjector">
+            <img src="/src/video/videoBackProjector.png" class="video-component video-component-hidden" id="imageBackProjector">
+          </div>
+        </div>
+      </div>
+
+      
+
+    </div>
+
+    <div class="footer">
+      <p class="footer">Copyright © 2020-2021 GCCI English Ministry. All Rights Reserved</p>
+    </div>
+
+  </body>
+
+</html>

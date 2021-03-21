@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+    <title>General Information</title>
+    <link rel="shortcut icon" href="/src/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/master.css">
+    <link rel="stylesheet" href="general.css">
+    <script type="text/javascript" src="general.js"></script>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+
+    <button type="button" class="home" onclick="window.location.href='/'">Home</button>
+
+    <div class="container">
+
+      <h1 class="title"> GCCI EM A/V System General Information</h1>
+      <p class="info" style="margin: 50px 0 0 0;">This is a comprehensive list of general information and important reminders concerning operation of the system.</p>
+
+      <div class="general-information-container">
+
+        <div class="general-information-header">
+          <button type="button" id="gi-header-audio" class="gi-header highlight">Audio</button>
+          <button type="button" id="gi-header-video" class="gi-header">Video</button>
+          <button type="button" id="gi-header-misc" class="gi-header">Miscellaneous</button>
+        </div>
+        <div class="general-information-header-underline" id="gi-header-underline"></div>
+
+        <div class="general-information-content">
+
+          <div class="gi-content" id="gi-content-audio">
+            <p>1. The speaker amplifiers and the subwoofer may <b>NOT</b> be turned on before the digital mixing console.</p>
+            <p>2. The admin login for the digital mixing console is reserved for English Ministry Staff and Grace Harvest Staff. All other users, please use the guest login.</p>
+            <p>3. Do <b>NOT</b> increased the level of the main volume slider past <b>digital 0</b>. The system is configured to be loud enough below that level.</p>
+            <p>4. Please do not adjust the frequencies of the microphones or the in-ear monitors.</p>
+          </div>
+
+          <div class="gi-content gi-content-hidden" id="gi-content-video">
+            <p>1. At times, if the camcorder is plugged into the system after the ATEM switcher is already on, the camera ouput will not be recognized. To remedy this, power cycle <b>Sequence D<b> on the power sequencer.</p>
+          </div>
+
+          <div class="gi-content gi-content-hidden" id="gi-content-misc">
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p class="footer">Copyright © 2020-2021 GCCI English Ministry. All Rights Reserved</p>
+    </div>
+
+  </body>
+
+</html>
