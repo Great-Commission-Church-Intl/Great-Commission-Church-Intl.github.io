@@ -48,7 +48,10 @@ function submitQuestion() {
     document.getElementById('submit-question').classList.add('hidden');
     document.getElementById('submit-indicator').classList.remove('hidden');
 
-    db.collection('jumpstartQuestions').add({ q: `${question}` }).then(() => {
+    let now = new Date();
+    let submissionTime = firebase.firestore.Timestamp.fromDate(now);
+
+    db.collection('jumpstartQuestions').add({ q: `${question}`, s: submissionTime }).then(() => {
 
       document.getElementById('submit-text').innerHTML = "Your question has been successfully submitted!";
       document.getElementById('submit-text').style.color = `#FFF`;
