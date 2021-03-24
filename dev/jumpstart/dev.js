@@ -62,6 +62,8 @@ function fetchQuestions() {
       questionElement.appendChild(questionText);
       container.appendChild(questionElement);
 
+      questionCount++;
+
     });
   }).catch(err => {
 
