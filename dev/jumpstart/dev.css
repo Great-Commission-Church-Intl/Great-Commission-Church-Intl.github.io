@@ -1,5 +1,6 @@
 html {
   background-color: #FFFFF0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 div.content-wrapper {
@@ -19,11 +20,12 @@ div.content-header {
   align-items: center;
   justify-content: center;
   z-index: 10;
+  font-family: 'Raleway', sans-serif;
 }
 
 h1.title {
   color: #FFF;
-  font-family: inherit;
+  font-family: 'Raleway', sans-serif;
   font-size: 44px;
 }
 
@@ -61,7 +63,7 @@ div.questions {
 }
 
 p.question {
-  font-size: 16px;
+  font-size: 18px;
   margin: 25px 0 25px 0;
 }
 

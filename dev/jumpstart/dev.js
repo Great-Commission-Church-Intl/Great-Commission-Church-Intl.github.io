@@ -24,7 +24,7 @@ function fetchQuestions() {
   let container = document.getElementById('question-container');
   let questionCount = 1;
 
-  db.collection('jumpstartQuestions').get().then(querySnapshot => {
+  db.collection('jumpstartQuestions').orderBy('s', 'desc').get().then(querySnapshot => {
 
     if (querySnapshot.empty) {
 
@@ -51,6 +51,10 @@ function fetchQuestions() {
     querySnapshot.forEach(doc => {
 
       let question = doc.get('q');
+      let time = doc.get('s').toDate();
+
+      let d = time.toLocaleString([], { year: 'numeric', month: 'long', day: '2-digit' });
+      let t = time.toLocaleString([], { hour: 'numeric', minute: '2-digit', second: '2-digit', hour12: true });
 
       let questionElement = document.createElement('p');
       questionElement.classList.add('question');
@@ -58,8 +62,14 @@ function fetchQuestions() {
       let bold = document.createElement('b');
       bold.appendChild(document.createTextNode(`${questionCount}. `));
       let questionText = document.createTextNode(question);
+      let questionSubmission = document.createTextNode(` - Submitted on ${d} | ${t} | ID: ${doc.id}`);
       questionElement.appendChild(bold);
       questionElement.appendChild(questionText);
+      let italic = document.createElement('i');
+      italic.style.fontSize = '12px';
+      italic.appendChild(questionSubmission);
+      questionElement.appendChild(document.createElement('br'));
+      questionElement.appendChild(italic);
       container.appendChild(questionElement);
 
       questionCount++;
