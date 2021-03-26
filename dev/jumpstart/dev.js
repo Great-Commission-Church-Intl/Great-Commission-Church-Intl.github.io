@@ -67,6 +67,7 @@ function fetchQuestions() {
       checkbox.setAttribute('type', 'checkbox');
       checkbox.classList.add('question-selected');
       checkbox.id = doc.id;
+      if (selected) { checkbox.checked = true }
       checkbox.addEventListener('change', function() {
         if (this.checked) {
           db.collection('jumpstartQuestions').doc(doc.id).update({ 'c': true }).then(() => { }).catch(err => {
