@@ -52,10 +52,31 @@ function fetchQuestions() {
 
       let question = doc.get('q');
       let time = doc.get('s').toDate();
+      let selected = doc.get('c') || false;
 
       let d = time.toLocaleString([], { year: 'numeric', month: 'long', day: '2-digit' });
       let t = time.toLocaleString([], { hour: 'numeric', minute: '2-digit', second: '2-digit', hour12: true });
 
+      let questionWrapper = document.createElement('div');
+      questionWrapper.classList.add('question-wrapper');
+      
+      let checkbox = document.createElement('input');
+      checkbox.setAttribute('type', 'checkbox');
+      checkbox.classList.add('question-selected');
+      checkbox.id = doc.id;
+      checkbox.addEventListener('change', function() {
+        if (this.checked) {
+          db.collection('jumpstartQuestions').doc(doc.id).update({ 'c': true }).then(() => { }).catch(err => {
+            console.log(err); alert(err);
+          });
+        } else {
+          db.collection('jumpstartQuestions').doc(doc.id).update({ 'c': false }).then(() => { }).catch(err => {
+            console.log(err); alert(err);
+          });
+        }
+      });
+      questionWrapper.appendChild(checkbox);
+      
       let questionElement = document.createElement('p');
       questionElement.classList.add('question');
       questionElement.id = doc.id;
@@ -70,7 +91,8 @@ function fetchQuestions() {
       italic.appendChild(questionSubmission);
       questionElement.appendChild(document.createElement('br'));
       questionElement.appendChild(italic);
-      container.appendChild(questionElement);
+      questionWrapper.appendChild(questionElement);
+      container.appendChild(questionWrapper);
 
       questionCount++;
 
