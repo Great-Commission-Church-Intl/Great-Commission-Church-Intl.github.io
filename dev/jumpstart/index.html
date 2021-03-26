@@ -11,10 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/master.css">
     <link rel="stylesheet" href="dev.css">
-    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
-    <script type="text/javascript" src="firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script type="text/javascript" src="/scripts/firebase.js"></script>
     <script type="text/javascript" src="dev.js"></script>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
     <meta charset="utf-8">
@@ -22,7 +23,12 @@
 
   <body>
 
-    <div class="content-wrapper">
+    <div class="preloader preloader-hidden" id="preloader">
+      <img src="/src/preloader.gif" alt="Loading Animation" class="preloader" id="preloader-animation">
+      <p class="preloader" id="preloader-text">Loading Jumpstart Questions...</p>
+    </div>
+
+    <div class="content-wrapper" id="content-wrapper">
 
       <div class="content-header">
         <h1 class="title">Jumpstart Questions</h1>

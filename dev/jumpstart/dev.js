@@ -21,6 +21,8 @@ function updateTime() {
 
 function fetchQuestions() {
 
+  document.getElementById('preloader').classList.remove('preloader-hidden');
+
   let container = document.getElementById('question-container');
   let questionCount = 1;
 
@@ -44,6 +46,7 @@ function fetchQuestions() {
       errorMessage.appendChild(errorText);
       errorWrapper.appendChild(errorMessage);
       container.appendChild(errorWrapper);
+      document.getElementById('preloader').classList.add('preloader-hidden');
       return;
 
     }
@@ -59,7 +62,7 @@ function fetchQuestions() {
 
       let questionWrapper = document.createElement('div');
       questionWrapper.classList.add('question-wrapper');
-      
+
       let checkbox = document.createElement('input');
       checkbox.setAttribute('type', 'checkbox');
       checkbox.classList.add('question-selected');
@@ -76,7 +79,7 @@ function fetchQuestions() {
         }
       });
       questionWrapper.appendChild(checkbox);
-      
+
       let questionElement = document.createElement('p');
       questionElement.classList.add('question');
       questionElement.id = doc.id;
@@ -97,6 +100,8 @@ function fetchQuestions() {
       questionCount++;
 
     });
+    document.getElementById('preloader').classList.add('preloader-hidden');
+
   }).catch(err => {
 
     let errorWrapper = document.createElement('div');
@@ -115,9 +120,55 @@ function fetchQuestions() {
     errorMessage.appendChild(errorText);
     errorWrapper.appendChild(errorMessage);
     container.appendChild(errorWrapper);
+    document.getElementById('preloader').classList.add('preloader-hidden');
 
   });
 
+}
+
+function authError() {
+  let error = document.createElement('p');
+  errorText = document.createTextNode('You are not authorized to view this site!');
+  error.appendChild(errorText);
+  error.style.color = '#C00000';
+  error.style.fontWeight = 'bold';
+  error.style.fontFamily = 'inherit';
+  error.style.fontSize = '16px';
+  error.style.textAlign = 'center';
+  document.getElementById('question-container').appendChild(error);
+  let link = document.createElement('p');
+  linkText = document.createTextNode('Sign in with a different account');
+  link.appendChild(linkText);
+  link.style.color = '#0000EE';
+  link.style.fontWeight = '400';
+  link.style.fontFamily = 'inherit';
+  link.style.fontSize = '12px';
+  link.style.textAlign = 'center';
+  link.style.textDecoration = 'underline';
+  link.style.cursor = 'pointer';
+  link.addEventListener('mousedown', function() { link.style.color = '#EE0000' });
+  link.addEventListener('click', function() { link.style.color = '#551A8B'; logout(); });
+  document.getElementById('question-container').appendChild(link);
+}
+
+function logout() { firebase.auth().signOut(); }
+
+async function authenticate() {
+
+  var provider = new firebase.auth.GoogleAuthProvider();
+  let verifiedUsers = ['roy.jou@thegcci.org', 'daniel.elliott@thegcci.org', 'york.liu@thegcci.org'];
+
+  return new Promise (async (resolve, reject) => {
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION).then(() => {
+      firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+          if (verifiedUsers.indexOf(user.email) < 0) { reject(); } else { resolve(); }
+        } else {
+          firebase.auth().signInWithRedirect(provider);
+        }
+      });
+    });
+  });
 }
 
 window.onload = (event) => {
@@ -125,6 +176,10 @@ window.onload = (event) => {
   updateTime();
   setInterval(function() { updateTime() }, 1000);
 
-  fetchQuestions();
+  authenticate().then(() => {
+    fetchQuestions();
+  }).catch(err => {
+    authError();
+  });
 
 }
