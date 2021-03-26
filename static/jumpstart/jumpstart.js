@@ -51,7 +51,7 @@ function submitQuestion() {
     let now = new Date();
     let submissionTime = firebase.firestore.Timestamp.fromDate(now);
 
-    db.collection('jumpstartQuestions').add({ q: `${question}`, s: submissionTime }).then(() => {
+    db.collection('jumpstartQuestions').add({ q: `${question}`, s: submissionTime, c: false }).then(() => {
 
       document.getElementById('submit-text').innerHTML = "Your question has been successfully submitted!";
       document.getElementById('submit-text').style.color = `#FFF`;
