@@ -1,0 +1,59 @@
+body {
+  background-color: #000;
+  font-family: inherit;
+}
+
+div.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25%;
+  height: 100%;
+}
+
+h1.e {
+  color: #FFF;
+  font-size: 144px;
+  margin: -15% 0 25px 0;
+}
+
+h2.e {
+  color: #FFF;
+  margin: 0 0 15px 0;
+}
+
+p.e {
+  color: #FFF;
+  text-align: center;
+}
+
+button.e {
+  color: #FFF;
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 25px 0 0 0;
+  width: 200px;
+  height: 50px;
+  font-family: inherit;
+}
+
+div.logo-wrapper {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: auto;
+}
+
+img.logo {
+  margin: 10px;
+  max-width: 80px;
+  max-height: 80px;
+}
