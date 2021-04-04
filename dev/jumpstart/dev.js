@@ -157,7 +157,7 @@ function logout() { firebase.auth().signOut(); }
 async function authenticate() {
 
   var provider = new firebase.auth.GoogleAuthProvider();
-  let verifiedUsers = ['roy.jou@thegcci.org', 'daniel.elliott@thegcci.org', 'york.liu@thegcci.org'];
+  let verifiedUsers = ['roy.jou@thegcci.org', 'daniel.elliott@thegcci.org', 'york.liu@thegcci.org', 'estheryang0210@gmail.com'];
 
   return new Promise (async (resolve, reject) => {
     firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION).then(() => {
