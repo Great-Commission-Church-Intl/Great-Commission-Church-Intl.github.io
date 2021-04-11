@@ -1,0 +1,83 @@
+html {
+  background-color: #FFFFF0;
+}
+
+body { height: 100%; overflow: hidden; }
+
+div.content-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+div.content-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 120px;
+  background-color: #36393F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+div.content-container {
+  position: relative;
+  top: 120px;
+  width: 100%;
+  height: calc(100% - 120px);
+  display: flex;
+  flex-direction: row;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+h1.header {
+  margin: 0;
+  color: #FFF;
+  font-family: inherit;
+  font-size: 24px;
+}
+
+div.table-wrapper {
+  width: 40%;
+  height: 100%;
+  overflow: scroll;
+  padding: 4% 0;
+}
+
+div.graph-wrapper {
+  width: 60%;
+  height: calc(100% - 120px);
+  margin: 4%;
+}
+
+table.sunday-attendance-data {
+  width: 100%;
+  margin: 0;
+}
+
+tr.header {
+  width: 100%;
+}
+
+th.date {
+  width: 50%;
+}
+
+th.value {
+  width: 25%;
+}
+
+td.data {
+  text-align: center;
+}

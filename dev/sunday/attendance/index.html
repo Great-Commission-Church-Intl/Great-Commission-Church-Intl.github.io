@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+    <title></title>
+    <link rel="shortcut icon" href="/src/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+    <script type="text/javascript" src="/scripts/firebase.js"></script>
+    <script type="text/javascript" src="/scripts/canvasjs.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+
+    <div class="content-wrapper">
+
+      <div class="content-header">
+        <h1 class="header">GCCI English Ministry Sunday Service Attendance</h1>
+      </div>
+
+      <div class="content-container">
+        <div class="table-wrapper">
+
+          <table id="data" class="sunday-attendance-data">
+            <tr class="header">
+              <th class="date">Date</th>
+              <th class="value">Physical</th>
+              <th class="value">Virtual</th>
+            </tr>
+          </table>
+
+        </div>
+
+        <div class="graph-wrapper">
+          <div id="stackedGraph" style="height: 46%; width: 100%;"></div>
+          <div id="blank" style="height: 8%; width: 100%;"></div>
+          <div id="lineGraph" style="height: 46%; width: 100%;"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <p class="footer">Copyright © 2020-2021 GCCI English Ministry. All Rights Reserved</p>
+    </div>
+
+  </body>
+
+</html>
