@@ -20,6 +20,8 @@ async function retrieveSundayAttendanceData() {
       let thisWeek = 0;
       let averagePhysical = 0;
       let averageVirtual = 0;
+      let peak = 0;
+      let averageTotal = 0;
 
       for (const doc of querySnapshot.docs) {
 
@@ -33,6 +35,8 @@ async function retrieveSundayAttendanceData() {
         else if (lastWeek < 1) { lastWeek = physical + virtual; }
         averagePhysical += physical;
         averageVirtual += virtual;
+        averageTotal += virtual + physical;
+        if (physical + virtual > peak) { peak = physical + virtual; }
 
         //Stacked Bar Graph Data
         if (count < 12) {
@@ -69,10 +73,11 @@ async function retrieveSundayAttendanceData() {
 
       averagePhysical /= data.length; averagePhysical = Math.round(averagePhysical * 10) / 10;
       averageVirtual /= data.length; averageVirtual = Math.round(averageVirtual * 10) / 10;
+      averageTotal /= data.length; averageTotal = Math.round(averageTotal * 10) / 10;
       pChange = ((thisWeek - lastWeek) / thisWeek) * 100; pChange = Math.round(pChange * 10) / 10;
       console.log(`Last Week: ${lastWeek} | This Week: ${thisWeek} | Percent Change: ${pChange}`);
 
-      resolve([data, count, dataPointP, dataPointV, dataPointT, averagePhysical, averageVirtual, pChange]);
+      resolve([data, count, dataPointP, dataPointV, dataPointT, averagePhysical, averageVirtual, pChange, peak, averageTotal]);
 
     }).catch(err => {
       console.log(err);
@@ -195,6 +200,8 @@ window.onload = () => {
       document.getElementById('percent-change').innerHTML = `${data[7] > 0 ? "+" : ""}${data[7]}%`;
       if (data[7] < 0) { document.getElementById('percent-change').style.color = `#800000`; }
       if (data[7] > 0) { document.getElementById('percent-change').style.color = `#008000`; }
+      document.getElementById('peak-attendance').innerHTML = `${data[8]}`;
+      document.getElementById('average-attendance').innerHTML = `${data[9]}`;
 
     }
   }).catch(err => {

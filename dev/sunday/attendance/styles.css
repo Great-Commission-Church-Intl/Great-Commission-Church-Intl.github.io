@@ -63,11 +63,37 @@ div.average-wrapper {
   margin: 20px 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.average-data-wrapper {
+  height: 25%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+p.average-data-label {
+  width: 100%;
+  height: 25%;
+  font-weight: 500;
+  font-size: 12px;
+  margin: 0;
+  text-align: center;
+}
+
+div.inner-wrapper {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: row;
 }
 
 div.average-data {
   width: 100%;
-  height: 33%;
+  height: 25%;
   margin: 0;
   display: flex;
   flex-direction: column;
