@@ -29,22 +29,52 @@
       </div>
 
       <div class="content-container">
-        <div class="table-wrapper">
 
-          <table id="data" class="sunday-attendance-data">
-            <tr class="header">
-              <th class="date">Date</th>
-              <th class="value">Physical</th>
-              <th class="value">Virtual</th>
-            </tr>
-          </table>
+        <div class="top-wrapper">
+
+          <div class="average-wrapper">
+
+            <div class="average-data">
+              <p class="calc" id="average-physical"></p>
+              <p class="label">Average Physical Attendance</p>
+            </div>
+
+            <div class="average-data">
+              <p class="calc" id="average-virtual"></p>
+              <p class="label">Average Virtual Attendance</p>
+            </div>
+
+            <div class="average-data">
+              <p class="calc" id="percent-change"></p>
+              <p class="label">Percent Change From Last Week</p>
+            </div>
+
+          </div>
+
+          <div class="table-wrapper">
+
+            <table id="data" class="sunday-attendance-data">
+              <tr class="header">
+                <th class="date">Date</th>
+                <th class="value">Physical</th>
+                <th class="value">Virtual</th>
+              </tr>
+            </table>
+
+          </div>
+
+          <div class="top-graph-wrapper">
+            <div id="stackedGraph" style="height: 92%; width: 96%;"></div>
+          </div>
 
         </div>
 
-        <div class="graph-wrapper">
-          <div id="stackedGraph" style="height: 46%; width: 100%;"></div>
-          <div id="blank" style="height: 8%; width: 100%;"></div>
-          <div id="lineGraph" style="height: 46%; width: 100%;"></div>
+        <div class="bottom-wrapper">
+
+          <div class="bottom-graph-wrapper">
+            <div id="lineGraph" style="height: 90%; width: 96%;"></div>
+          </div>
+
         </div>
 
       </div>

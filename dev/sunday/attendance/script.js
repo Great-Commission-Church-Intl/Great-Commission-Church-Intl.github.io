@@ -16,6 +16,10 @@ async function retrieveSundayAttendanceData() {
       let dataPointP = [];
       let dataPointV = [];
       let dataPointT = [];
+      let lastWeek = 0;
+      let thisWeek = 0;
+      let averagePhysical = 0;
+      let averageVirtual = 0;
 
       for (const doc of querySnapshot.docs) {
 
@@ -25,6 +29,11 @@ async function retrieveSundayAttendanceData() {
         let virtual = parseInt(doc.get('virtual'));
         data.push(new SSAEntry(date, physical, virtual));
 
+        if (thisWeek < 1) { thisWeek = physical + virtual; }
+        else if (lastWeek < 1) { lastWeek = physical + virtual; }
+        averagePhysical += physical;
+        averageVirtual += virtual;
+
         //Stacked Bar Graph Data
         if (count < 12) {
 
@@ -33,6 +42,7 @@ async function retrieveSundayAttendanceData() {
           p.x = new Date(date.getFullYear(), date.getMonth(), date.getDate());
           p.y = physical;
           p.toolTip = `Physical: ${physical}`;
+          p.label = `${date.getMonth()+1}/${date.getDate()}`;
           dataPointP.push(p);
 
           //Virtual Data
@@ -42,20 +52,27 @@ async function retrieveSundayAttendanceData() {
           v.toolTip = `Virtual: ${virtual}`;
           dataPointV.push(v);
 
-          //Total Data
-          let t = {};
-          t.x = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-          t.y = physical + virtual;
-          t.indexLabel = `${physical + virtual}`;
-          dataPointT.push(t);
-
         }
+
+        //Total Data
+        let t = {};
+        t.x = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+        t.y = physical + virtual;
+        t.indexLabel = `${physical + virtual}`;
+        t.label = `${date.getMonth()+1}/${date.getDate()}`;
+        dataPointT.push(t);
 
         count++;
       }
 
       if (count < 1) { return resolve(); }
-      resolve([data, count, dataPointP, dataPointV, dataPointT]);
+
+      averagePhysical /= data.length; averagePhysical = Math.round(averagePhysical * 10) / 10;
+      averageVirtual /= data.length; averageVirtual = Math.round(averageVirtual * 10) / 10;
+      pChange = ((thisWeek - lastWeek) / thisWeek) * 100; pChange = Math.round(pChange * 10) / 10;
+      console.log(`Last Week: ${lastWeek} | This Week: ${thisWeek} | Percent Change: ${pChange}`);
+
+      resolve([data, count, dataPointP, dataPointV, dataPointT, averagePhysical, averageVirtual, pChange]);
 
     }).catch(err => {
       console.log(err);
@@ -138,7 +155,7 @@ function generateLineGraph(t) {
     animationEnabled: true,
     backgroundColor: 'transparent',
     title: {
-      text: "GCCI EM Total Attendance - Past 12 Weeks",
+      text: "GCCI EM Total Attendance",
       fontFamily: "Raleway",
       fontColor: "#695A42",
       fontSize: 22,
@@ -165,11 +182,20 @@ window.onload = () => {
   retrieveSundayAttendanceData().then(data => {
     if (typeof data === 'undefined') { console.log('NO ENTRIES'); }
     else {
+
       console.log(`ENTRY COUNT: ${data[1]}`);
       console.log(data[0]);
+
       populateTable(data[0]);
       generateColumnChart(data[2], data[3]);
       generateLineGraph(data[4]);
+
+      document.getElementById('average-physical').innerHTML = `${data[5]}`;
+      document.getElementById('average-virtual').innerHTML = `${data[6]}`;
+      document.getElementById('percent-change').innerHTML = `${data[7] > 0 ? "+" : ""}${data[7]}%`;
+      if (data[7] < 0) { document.getElementById('percent-change').style.color = `#800000`; }
+      if (data[7] > 0) { document.getElementById('percent-change').style.color = `#008000`; }
+
     }
   }).catch(err => {
     console.log(err);
