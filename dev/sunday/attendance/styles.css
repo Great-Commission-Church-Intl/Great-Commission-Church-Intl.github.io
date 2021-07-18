@@ -97,6 +97,7 @@ div.table-wrapper {
   height: 100%;
   overflow: scroll;
   margin: 20px 0;
+  display: flex;
 }
 
 div.top-graph-wrapper {
