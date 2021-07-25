@@ -126,7 +126,8 @@ function generateColumnChart(p, v) {
       fontFamily: "Raleway",
       fontColor: "#695A42",
       fontSize: 22,
-      margin: 20
+      margin: 20,
+      horizontalAlign: "center"
     },
     axisX: {
       interval: 1,
