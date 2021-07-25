@@ -77,7 +77,7 @@ async function retrieveSundayAttendanceData() {
       pChange = ((thisWeek - lastWeek) / thisWeek) * 100; pChange = Math.round(pChange * 10) / 10;
       console.log(`Last Week: ${lastWeek} | This Week: ${thisWeek} | Percent Change: ${pChange}`);
 
-      resolve([data, count, dataPointP, dataPointV, dataPointT, averagePhysical, averageVirtual, pChange, peak, averageTotal]);
+      resolve([data, count, dataPointP, dataPointV, dataPointT, averagePhysical, averageVirtual, pChange, peak, averageTotal, thisWeek]);
 
     }).catch(err => {
       console.log(err);
@@ -202,6 +202,7 @@ window.onload = () => {
       if (data[7] > 0) { document.getElementById('percent-change').style.color = `#008000`; }
       document.getElementById('peak-attendance').innerHTML = `${data[8]}`;
       document.getElementById('average-attendance').innerHTML = `${data[9]}`;
+      document.getElementById('last-attendance').innerHTML = `${data[10]}`;
 
     }
   }).catch(err => {

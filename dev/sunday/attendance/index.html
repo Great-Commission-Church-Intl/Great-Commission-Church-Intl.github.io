@@ -31,72 +31,69 @@
 
       <div class="content-container">
 
-        <div class="top-wrapper">
+        <div class="left-wrapper">
 
-          <div class="average-wrapper">
-
-            <div class="average-data-wrapper">
-
-              <div class="inner-wrapper">
-
-                <div class="average-data" style="height: 75%; width: auto; margin: auto 30px 0 auto;">
-                  <p class="calc" id="average-physical"></p>
-                  <p class="label">Physical</p>
-                </div>
-
-                <div class="average-data" style="height: 75%; width: auto; margin: auto auto 0 30px;">
-                  <p class="calc" id="average-virtual"></p>
-                  <p class="label">Virtual</p>
-                </div>
-
-              </div>
-
-              <div class="average-data-label">
-                <p class="average-data-label">Average Attendance</p>
-              </div>
-
-            </div>
-
-            <div class="average-data">
-              <p class="calc" id="average-attendance"></p>
-              <p class="label">Average Combined Attendance</p>
-            </div>
-
-            <div class="average-data">
-              <p class="calc" id="peak-attendance"></p>
-              <p class="label">Peak Attendance</p>
-            </div>
-
-            <div class="average-data">
-              <p class="calc" id="percent-change"></p>
-              <p class="label">Percent Change From Last Week</p>
-            </div>
-
+          <div class="average-data">
+            <p class="calc" id="average-physical"></p>
+            <p class="label">Average Physical Attendance</p>
           </div>
 
-          <div class="table-wrapper">
-
-            <table id="data" class="sunday-attendance-data">
-              <tr class="header">
-                <th class="date">Date</th>
-                <th class="value">Physical</th>
-                <th class="value">Virtual</th>
-              </tr>
-            </table>
-
+          <div class="average-data">
+            <p class="calc" id="average-virtual"></p>
+            <p class="label">Average Virtual Attendance</p>
           </div>
 
-          <div class="top-graph-wrapper">
-            <div id="stackedGraph" style="height: 92%; width: 96%;"></div>
+          <div class="average-data">
+            <p class="calc" id="average-attendance"></p>
+            <p class="label">Average Combined Attendance</p>
+          </div>
+
+          <div class="average-data">
+            <p class="calc" id="peak-attendance"></p>
+            <p class="label">Peak Attendance</p>
+          </div>
+
+          <div class="average-data">
+            <p class="calc" id="last-attendance"></p>
+            <p class="label">Latest Attendance</p>
+          </div>
+
+          <div class="average-data">
+            <p class="calc" id="percent-change"></p>
+            <p class="label">Percent Change From Last Week</p>
           </div>
 
         </div>
 
-        <div class="bottom-wrapper">
+        <div class="right-wrapper">
+
+          <div class="top-wrapper">
+
+            <div class="table-wrapper">
+
+              <table id="data" class="sunday-attendance-data">
+                <tr class="header">
+                  <th class="date">Date</th>
+                  <th class="value">Physical</th>
+                  <th class="value">Virtual</th>
+                </tr>
+              </table>
+
+            </div>
+
+            <div class="top-graph-wrapper">
+              <div id="stackedGraph" style="height: 92%; width: 96%;"></div>
+            </div>
+
+          </div>
+
+          <div class="bottom-wrapper">
 
           <div class="bottom-graph-wrapper">
             <div id="lineGraph" style="height: 90%; width: 96%;"></div>
           </div>
+
+        </div>
 
         </div>
 
