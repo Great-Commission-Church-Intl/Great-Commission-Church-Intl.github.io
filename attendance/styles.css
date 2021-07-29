@@ -25,7 +25,7 @@ div.content-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
+  flex-direction: column;
 }
 
 div.content-container {
@@ -45,7 +45,97 @@ h1.header {
   margin: 0;
   color: #FFF;
   font-family: inherit;
+  font-size: 34px;
+}
+
+p.header {
+  margin: 0;
+  color: #FFF;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+div.main-top-wrapper {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+div.main-top-cell {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p.main-calc {
+  margin: 0 auto 25px auto;
+  font-size: 200px;
+  font-weight: bold;
+}
+
+p.main-calc-sub {
+  font-size: 108px;
+  font-weight: bold;
+  margin: 0 auto 25px auto;
+}
+
+span.main-percent-change {
+  font-size: 0.2em;
+}
+
+p.main-label-CH {
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+p.main-label-EN {
+  margin: 0;
   font-size: 24px;
+  font-weight: bold;
+}
+
+div.main-bottom-wrapper {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+div.main-bottom-cell {
+  width: calc(100% / 6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p.main-bottom-calc {
+  margin: 0 auto 25px auto;
+  font-size: 96px;
+  font-weight: bold;
+}
+
+p.main-bottom-label-CH {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+p.main-bottom-label-EN {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 div.left-wrapper {
@@ -135,7 +225,7 @@ tr.header {
 }
 
 th.date {
-  width: 50%;
+  width: 25%;
 }
 
 th.value {
