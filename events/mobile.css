@@ -1,0 +1,35 @@
+@media only screen and (max-device-width: 480px) {
+
+  div.content-wrapper {
+    width: 85%;
+  }
+
+  h1.title {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  p.time {
+    font-size: 0.8em;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  p.already-participating {
+    font-size: 1em;
+  }
+
+  p.participating {
+    font-size: 1em;
+  }
+
+  div.buttons {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    height: 160px;
+    width: 75%;
+  }
+
+  p.copyright-data { font-size: 0.5em; }
+
+}

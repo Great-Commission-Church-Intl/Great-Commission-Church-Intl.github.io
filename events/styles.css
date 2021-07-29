@@ -1,0 +1,124 @@
+html {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  background-color: #CFCFCF;
+}
+
+div.event-id-error {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: #CFCFCF;
+  z-index: 10;
+  display: none;
+  pointer-events: none;
+}
+
+p.event-id-error {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #A00000;
+  text-align: center;
+}
+
+div.error {
+  display: flex;
+  pointer-events: all;
+}
+
+div.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  margin: 0 auto;
+}
+
+h1.title {
+  font-size: 4em;
+  margin: 0;
+}
+
+p.time {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+div.buttons {
+  margin: 25px auto 0 auto;
+  width: 50%;
+  height: 80px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+}
+
+div.message {
+  margin: 25px auto 0 auto;
+  width: 50%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.hidden {
+  display: none;
+}
+
+p.already-participating {
+  color: #A00000;
+  font-size: 1.5em;
+  display: none;
+}
+
+p.participating {
+  color: #00A000;
+  font-size: 1.5em;
+  display: none;
+}
+
+p.visible {
+  display: block;
+}
+
+button.invisible {
+  display: none;
+}
+
+button.response {
+  margin: 10px;
+  background-color: transparent;
+  font-family: inherit;
+  border-radius: 10px;
+  font-size: 1em;
+}
+
+div.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #2A2A2A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p.copyright-data {
+  margin: 0;
+  color: #FFF;
+  font-size: 0.7em;
+}

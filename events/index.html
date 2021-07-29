@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+    <title></title>
+    <link rel="shortcut icon" href="/src/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile.css">
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+    <script src="/scripts/firebase-gcci.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+
+    <div class="event-id-error" id="event-id-error">
+      <p class="event-id-error">Invalid Event ID!<br>Please check your URL and try again!</p>
+    </div>
+
+    <div class="content-wrapper">
+
+      <h1 class="title" id="title"> </h1>
+      <p class="time" id="time"> </p>
+
+      <div class="buttons hidden" id="content">
+        <p class="already-participating" id="p0">您已經回應過了</p>
+        <p class="participating" id="p1">謝謝您的回應</p>
+        <button class="response" id="btn1">我會參加</button>
+        <button class="response" id="btn2">我不會參加</button>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <p class="copyright-data">Copyright © 2020-2021 Great Commission Church International. All Rights Reserved.</p>
+    </div>
+
+  </body>
+
+</html>
