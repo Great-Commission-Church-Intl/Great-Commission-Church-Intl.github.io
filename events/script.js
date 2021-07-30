@@ -51,9 +51,14 @@ window.onload = async() => {
 
   }
 
-  /* Participant Count */
-  let count = 0; for (const [key, value] of Object.entries(participants)) { if (value) count++; }
-  document.getElementById('pc').innerHTML = `${count}`;
+  /* Participant Counts */
+  let pcL = 0; for (const [key, value] of Object.entries(participants)) { if (value) pcL++; }
+  document.getElementById('pc-l').innerHTML = `${pcL}`;
+
+  let pcR = 0; for (const [key, value] of Object.entries(participants)) { if (!value) pcR++; }
+  document.getElementById('pc-r').innerHTML = `${pcR}`;
+
+  document.getElementById('pc-c').innerHTML = `${pcL + pcR}`;
 
   document.getElementById('content').classList.remove('hidden');
 
