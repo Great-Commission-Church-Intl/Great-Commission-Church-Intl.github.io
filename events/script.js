@@ -51,6 +51,10 @@ window.onload = async() => {
 
   }
 
+  /* Participant Count */
+  let count = 0; for (const [key, value] of Object.entries(participants)) { if (value) count++; }
+  document.getElementById('pc').innerHTML = `${count}`;
+
   document.getElementById('content').classList.remove('hidden');
 
   /* Set Up Responses */
