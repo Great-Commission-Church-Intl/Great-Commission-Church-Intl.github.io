@@ -10,10 +10,29 @@ body {
   background-color: #CFCFCF;
 }
 
-p.participant-count {
+p.pc-l {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 1em;
+  margin: 15px;
+  color: #00A000;
+}
+
+p.pc-r {
   position: fixed;
   top: 0;
   right: 0;
+  font-size: 1em;
+  margin: 15px;
+  color: #A00000;
+}
+
+p.pc-c {
+  position: fixed;
+  top: 0;
+  left: calc(50% - 25px);
+  width: 50px;
   font-size: 1em;
   margin: 15px;
 }
