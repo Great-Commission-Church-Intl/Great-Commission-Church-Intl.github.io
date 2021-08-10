@@ -1,6 +1,6 @@
 function updateTime() {
 
-  let targetTime = new Date(2021, 3, 4, 11, 0, 0);
+  let targetTime = new Date(2021, 7, 27, 19, 0, 0);
   let now = new Date();
   let remaining = targetTime - now < 0 ? 0 : targetTime - now;
   var days, hours, minutes, seconds;
