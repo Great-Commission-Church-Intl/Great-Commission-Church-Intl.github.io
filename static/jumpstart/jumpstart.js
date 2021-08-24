@@ -111,7 +111,6 @@ window.onload = (event) => {
 
           let downOpacity = 3.5 - (2 * scrollPercentage);
           let upOpacity = (scrollPercentage - 1.5) * 2
-          document.getElementById('countdown-label-main').style.opacity = downOpacity;
           document.getElementById('countdown-wrapper').style.opacity = downOpacity;
           document.getElementById('countdown-header').style.opacity = upOpacity;
 
