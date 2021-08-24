@@ -5,11 +5,12 @@
   div.logo-title { display: none; }
   div.countdown-header { display: none; }
   div.countdown-wrapper { display: none; }
+  div.background-container { display: none; }
+
+  html { background: url('/src/jumpstart/bkg1gaussian.png') no-repeat; }
 
   div.wrapper {
-    position: relative;
     width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
   }
