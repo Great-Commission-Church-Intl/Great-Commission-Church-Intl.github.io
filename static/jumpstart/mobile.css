@@ -1,0 +1,99 @@
+@media only screen and (max-device-width: 480px) {
+
+  button.return-to-em-site { display: none; }
+  div.logo-wrapper { display: none; }
+  div.logo-title { display: none; }
+  div.countdown-wrapper { display: none; }
+
+  div.logo-wrapper-mobile {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  img.logo-mobile {
+    margin: 10px;
+    max-width: 50vw;
+    max-height: 50vw;
+  }
+
+  div.subtitle-wrapper {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1.subtitle {
+    font-size: 24px;
+  }
+
+  div.title-wrapper {
+    margin: 2vw 7vw;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1.title {
+    font-size: 42px;
+  }
+
+  h2.title-main {
+    text-align: center;
+  }
+
+  div.content-wrapper {
+    height: auto;
+  }
+
+  h2.title-main {
+    font-size: 22px;
+  }
+
+  p.desc {
+    font-size: 16px;
+    margin: 50px 10vw 0 10vw;
+  }
+
+  input.question-input {
+    margin: 50px 10vw 0 10vw;
+    font-size: 16px;
+  }
+
+  div.submit-wrapper {
+    margin: 35px auto;
+  }
+
+  p.submit-text {
+    text-align: center;
+  }
+
+  h2.title-sub {
+    margin: 10vh 10vw 0 10vw;
+    font-size: 16px;
+  }
+
+  h1.event-date {
+    font-size: 36px;
+    margin: 20px 10vw 0 10vw;
+  }
+
+  div.video-wrapper {
+    width: 80vw;
+    height: 45vw;
+    margin: 10vh 10vw 0 10vw;
+  }
+
+  p.video-subtitle {
+    margin: 20px 10vw 10vh 10vw;
+    font-size: 12px;
+    text-align: center;
+  }
+
+}

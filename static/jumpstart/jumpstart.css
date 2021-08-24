@@ -103,6 +103,10 @@ div.logo-wrapper {
   margin-bottom: auto;
 }
 
+div.logo-wrapper-mobile {
+  display: none;
+}
+
 img.logo {
   margin: 10px;
   max-width: 100px;
