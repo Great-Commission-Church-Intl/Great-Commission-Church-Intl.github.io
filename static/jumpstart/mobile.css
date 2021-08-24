@@ -3,7 +3,17 @@
   button.return-to-em-site { display: none; }
   div.logo-wrapper { display: none; }
   div.logo-title { display: none; }
+  div.countdown-header { display: none; }
   div.countdown-wrapper { display: none; }
+
+  div.wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
 
   div.logo-wrapper-mobile {
     width: 100%;
