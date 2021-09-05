@@ -244,7 +244,7 @@ function generateLineGraph(attendance, ministry) {
     },
     data: [{
       type: "line",
-      lineThickness: 0,
+      lineColor: "transparent",
       showInLegend: true,
       color: "#696661",
       name: "Total Attendance",
