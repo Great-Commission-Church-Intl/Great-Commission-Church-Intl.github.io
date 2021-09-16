@@ -43,7 +43,7 @@ button.navigation-overlay-button {
   height: 5vh;
   margin: 2vh;
   color: #FAFEEA;
-  border: 1px solid #FAFEEA44;
+  border: 1px solid #FAFEEA;
   background-color: transparent;
   box-shadow: none;
   transition: background-color 0.35s, color 0.35s;
