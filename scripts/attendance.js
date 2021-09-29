@@ -272,9 +272,9 @@ function generateLineGraph(attendance, ministry) {
     },{
       type: "line",
       lineColor: "#FF0000",
-      showInLegend: true,
+      showInLegend: false,
       color: "transparent",
-      name: "Average Attendance",
+      name: "",
       dataPoints: attendance.generateAverageLineDataPoints(ministry)
     }]
   });
