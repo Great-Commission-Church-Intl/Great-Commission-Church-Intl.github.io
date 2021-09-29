@@ -115,6 +115,26 @@ class Attendance {
 
   }
 
+  generateAverageLineDataPoints(ministry) {
+
+    let dataPointT = [];
+
+    this.entries.forEach(entry => {
+
+      let date = entry.getDate();
+      let t = {};
+      t.x = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+      t.y = this.getAverageTotal(ministry);
+      t.indexLabel = "";
+      t.label = "";
+      dataPointT.push(t);
+
+    });
+
+    return dataPointT;
+
+  }
+
   static getPercentChange(current, previous, ministry) {
     let pc = ((current.getTotal(ministry) - previous.getTotal(ministry)) / current.getTotal(ministry)) * 100;
     return Math.round(pc * 100) / 100;
@@ -249,10 +269,40 @@ function generateLineGraph(attendance, ministry) {
       color: "#696661",
       name: "Total Attendance",
       dataPoints: attendance.generateLineGraphDataPoints(ministry)
+    },{
+      type: "line",
+      lineColor: "#FF0000",
+      showInLegend: false,
+      color: "transparent",
+      name: "",
+      dataPoints: attendance.generateAverageLineDataPoints(ministry)
     }]
   });
 
   chart.render();
+
+  /*var average = new CanvasJS.Chart("averageLine", {
+
+    animationEnabled: true,
+    backgroundColor: 'transparent',
+    title: {
+      text: '',
+    },
+    axisX: {
+      interval: 1,
+      intervalType: "week"
+    },
+    data: [{
+      type: "line",
+      lineColor: "#FF0000",
+      showInLegend: false,
+      color: "transparent",
+      name: "",
+      dataPoints: attendance.generateAverageLineDataPoints(ministry)
+    }]
+  });*/
+
+  //average.render();
 
 }
 
