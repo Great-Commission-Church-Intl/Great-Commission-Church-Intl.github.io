@@ -1,0 +1,45 @@
+html { font-family: 'Montserrat', sans-serif; }
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: #2A2A2A;
+  overflow: hidden;
+}
+
+div.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: url('background.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.counter-container {
+  height: 25vh;
+  width: 25vh;
+  border-radius: 50%;
+  background-color: transparent;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+h1.head-count {
+  color: #FFF;
+  margin: 0;
+}
+
+p.head-count-label {
+  color: #FFF;
+  margin: 0;
+}

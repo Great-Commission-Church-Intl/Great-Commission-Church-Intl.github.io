@@ -12,12 +12,19 @@ div.wrapper {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
+div.count-container {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
 div.head-count-container {
-  height: 20%;
+  height: 50%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -38,12 +45,12 @@ p.head-count-label {
 }
 
 div.interface-container {
-  width: calc(100% - 4vw);
-  height: calc(60% - 4vw);
+  width: 50%;
+  height: 100%;
   margin: 2vw;
   display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-columns: 50% 50%;
   grid-gap: 2vw;
 }
 
@@ -107,7 +114,7 @@ div.head-count-breakdown-container {
   flex: 1 1 auto;
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% ;
+  grid-template-columns: 50% 50%;
 }
 
 div.head-count-breakdown {
