@@ -1,18 +1,21 @@
-const break = document.createElement('span');
-break.innerHTML = "<br><br>"
+const br = document.createElement('span');
+br.innerHTML = "<br><br>"
 
-db.collection('jumpstartQuestions').orderBy('s', 'desc').get().then(querySnapshot => {
+window.onload = () => {
 
-  if (querySnapshot.empty) { return; }
+  db.collection('jumpstartQuestions').orderBy('s', 'desc').get().then(querySnapshot => {
 
-  const wrapper = document.getElementById('content-wrapper');
-  querySnapshot.forEach(doc => {
+    if (querySnapshot.empty) { return; }
 
-    let question = doc.get('q');
-    let p = document.createElement('p');
-    p.appendChild(document.createTextNode(question));
-    wrapper.appendChild(p);
-    wrapper.appendChild(break);
+    const wrapper = document.getElementById('content-wrapper');
+    querySnapshot.forEach(doc => {
 
+      let question = doc.get('q');
+      let p = document.createElement('p');
+      p.appendChild(document.createTextNode(question));
+      wrapper.appendChild(p);
+      wrapper.appendChild(br);
+
+    });
   });
-});
+}
